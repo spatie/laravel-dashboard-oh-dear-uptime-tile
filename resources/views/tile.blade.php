@@ -1,13 +1,9 @@
-<x-dashboard-tile :position="$position">
-    <div wire:poll.{{ $refreshInSeconds }}s class="grid gap-padding h-full markup">
+<x-dashboard-tile wire:poll.30s :position="$position" :show="count($downSites)">
+    <div class="grid gap-padding h-full markup" style="grid-template-rows: auto 1fr" class="markup bg-warn">
+        <h1>Downtime</h1>
         <ul class="align-self-center">
-            @foreach($events as $event)
-                <li>
-                    <div class="my-2">
-                        <div class="{{ $event['withinWeek'] ? 'font-bold' : '' }}">{{ $event['name'] }}</div>
-                        <div class="text-sm text-dimmed">{{ $event['date']->format('d.m.Y') }}</div>
-                    </div>
-                </li>
+            @foreach($downSites as $downSite)
+                <div class="font-bold truncate">{{ $downSite }}</div>
             @endforeach
         </ul>
     </div>

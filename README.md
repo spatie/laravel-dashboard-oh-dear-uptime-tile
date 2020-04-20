@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-calendar-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-calendar-tile/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-calendar-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-oh-dear-uptime-tile/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
 
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
@@ -18,14 +18,14 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-dashboard-calendar-tile
+composer require spatie/laravel-dashboard-oh-dear-uptime-tile
 ```
 
 ## Usage
 
 ``` php
-$CalendarTile = new Spatie\CalendarTile();
-echo $CalendarTile->echoPhrase('Hello, Spatie!');
+$OhDearUptimeTile = new Spatie\OhDearUptimeTile();
+echo $OhDearUptimeTile->echoPhrase('Hello, Spatie!');
 ```
 
 ## Testing

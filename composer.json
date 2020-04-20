@@ -1,11 +1,11 @@
 {
-    "name": "spatie/laravel-dashboard-calendar-tile",
-    "description": "A calendar tile for Laravel Dashboard",
+    "name": "spatie/laravel-dashboard-oh-dear-uptime-tile",
+    "description": "A uptime tile for Laravel Dashboard",
     "keywords": [
         "spatie",
-        "laravel-dashboard-calendar-tile"
+        "laravel-dashboard-oh-dear-uptime-tile"
     ],
-    "homepage": "https://github.com/spatie/laravel-dashboard-calendar-tile",
+    "homepage": "https://github.com/spatie/laravel-dashboard-oh-dear-uptime-tile",
     "license": "MIT",
     "authors": [
         {
@@ -17,20 +17,20 @@
     ],
     "require": {
         "php": "^7.4",
-        "spatie/laravel-dashboard": "dev-master",
-        "spatie/laravel-google-calendar": "^2.5"
+        "ohdearapp/laravel-ohdear-webhooks": "^1.3",
+        "spatie/laravel-dashboard": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\CalendarTile\\": "src"
+            "Spatie\\OhDearUptimeTile\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\CalendarTile\\Tests\\": "tests"
+            "Spatie\\OhDearUptimeTile\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\CalendarTile\\CalendarTileServiceProvider"
+              "OhDearUptimeTileServiceProvider"
             ]
         }
     },
