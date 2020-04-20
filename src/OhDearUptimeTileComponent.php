@@ -2,9 +2,9 @@
 
 namespace Spatie\OhDearUptimeTile;
 
-use App\Tiles\Uptime\OhDearUptimeStore;
+use Livewire\Component;
 
-class OhDearUptimeTileComponent
+class OhDearUptimeTileComponent extends Component
 {
     /** @var string */
     public $position;
