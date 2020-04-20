@@ -4,7 +4,6 @@ namespace Spatie\OhDearUptimeTile;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 use Livewire\Livewire;
-use Spatie\CalendarTile\FetchCalendarEventsCommand;
 
 class OhDearUptimeTileServiceProvider extends EventServiceProvider
 {
