@@ -4,6 +4,7 @@ namespace Spatie\OhDearUptimeTile;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 use Livewire\Livewire;
+use Spatie\CalendarTile\FetchCalendarEventsCommand;
 
 class OhDearUptimeTileServiceProvider extends EventServiceProvider
 {
@@ -14,6 +15,12 @@ class OhDearUptimeTileServiceProvider extends EventServiceProvider
     public function boot()
     {
         Livewire::component('oh-dear-uptime-tile', OhDearUptimeTileComponent::class);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ClearOhDearDownSitesCommand::class,
+            ]);
+        }
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-oh-dear-uptime-tile');
     }

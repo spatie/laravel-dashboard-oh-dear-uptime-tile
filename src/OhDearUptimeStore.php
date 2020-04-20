@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Tiles\Uptime;
+namespace Spatie\OhDearUptimeTile;
 
-use Illuminate\Support\Facades\File;
 use Spatie\Dashboard\Models\Tile;
-use Spatie\Valuestore\Valuestore;
 
 class OhDearUptimeStore
 {

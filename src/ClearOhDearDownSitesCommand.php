@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tiles\Uptime;
+namespace Spatie\OhDearUptimeTile;
 
 use Illuminate\Console\Command;
 
