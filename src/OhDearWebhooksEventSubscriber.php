@@ -4,8 +4,6 @@ namespace Spatie\OhDearUptimeTile;
 
 use App\Tiles\Uptime\OhDearUptimeStore;
 use Illuminate\Events\Dispatcher;
-use App\Events\Uptime\UptimeCheckFailed;
-use App\Events\Uptime\UptimeCheckRecovered;
 use OhDear\LaravelWebhooks\OhDearWebhookCall;
 
 class OhDearWebhooksEventSubscriber

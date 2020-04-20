@@ -35,7 +35,7 @@ class OhDearUptimeStore
     {
         $downSites = $this->downSites();
 
-        $downSites = array_filter($downSites, fn(array $downSite) => $downSite !== $upSiteUrl);
+        $downSites = array_filter($downSites, fn (array $downSite) => $downSite !== $upSiteUrl);
 
         $this->tile->putData('downSites', $downSites);
 
