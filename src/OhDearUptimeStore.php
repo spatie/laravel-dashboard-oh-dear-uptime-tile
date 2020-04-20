@@ -2,9 +2,7 @@
 
 namespace App\Tiles\Uptime;
 
-use Illuminate\Support\Facades\File;
 use Spatie\Dashboard\Models\Tile;
-use Spatie\Valuestore\Valuestore;
 
 class OhDearUptimeStore
 {
@@ -37,7 +35,7 @@ class OhDearUptimeStore
     {
         $downSites = $this->downSites();
 
-        $downSites = array_filter($downSites, fn(array $downSite) => $downSite !== $upSiteUrl);
+        $downSites = array_filter($downSites, fn (array $downSite) => $downSite !== $upSiteUrl);
 
         $this->tile->putData('downSites', $downSites);
 
