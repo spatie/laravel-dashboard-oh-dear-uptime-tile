@@ -6,6 +6,8 @@ use Livewire\Component;
 
 class OhDearUptimeTileComponent extends Component
 {
+    protected static $showTile = null;
+
     /** @var string */
     public $position;
 
@@ -16,8 +18,18 @@ class OhDearUptimeTileComponent extends Component
 
     public function render()
     {
-        return view('dashboard-oh-dear-uptime-tile::tile', [
-            'downSites' => OhDearUptimeStore::make()->downSites(),
-        ]);
+        $downSites = OhDearUptimeStore::make()->downSites();
+
+        $showTile = isset(static::$showTile)
+            ? (static::$showTile)($downSites)
+            : true;
+
+        return view('dashboard-oh-dear-uptime-tile::tile', compact('downSites', 'showTile'));
+    }
+
+    public static function showTile(callable $callable): void
+    {
+        static::$showTile = $callable;
     }
 }
+

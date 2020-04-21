@@ -1,4 +1,4 @@
-<x-dashboard-tile wire:poll.30s :position="$position" :show="count($downSites)">
+<x-dashboard-tile wire:poll.30s :position="$position" :show="$showTile">
     <div class="grid gap-padding h-full markup" style="grid-template-rows: auto 1fr" class="markup bg-warn">
         <h1>Downtime</h1>
         <ul class="align-self-center">
