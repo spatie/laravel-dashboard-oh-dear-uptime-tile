@@ -1,8 +1,8 @@
 # A tile to display sites that are down
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-oh-dear-uptime-tile/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-oh-dear-uptime-tile)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-oh-dear-uptime-tile/run-tests?label=tests)](https://github.com/spatie/laravel-dashboard-oh-dear-uptime-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-oh-dear-uptime-tile)
 
 This tile can used on the [Laravel Dashboard](https://github.com/spatie/laravel-dashboard) to display the sites that [Oh Dear](https://ohdear.app) detects as down.
 
