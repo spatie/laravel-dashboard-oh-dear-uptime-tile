@@ -1,10 +1,17 @@
-<x-dashboard-tile wire:poll.{{ $refreshIntervalInSeconds }}s :position="$position" :show="$showTile">
-    <div class="grid gap-padding h-full markup" style="grid-template-rows: auto 1fr" class="markup bg-warn">
-        <h1>Downtime</h1>
-        <ul class="align-self-center">
-            @foreach($downSites as $downSite)
-                <div class="font-bold truncate">{{ $downSite }}</div>
-            @endforeach
-        </ul>
+<x-dashboard-tile :position="$position" :show="$showTile" :fade="false">
+    <div class="absolute inset-0 bg-warning p-4">
+        <div wire:poll.{{ $refreshIntervalInSeconds }}s class="grid grid-rows-auto-1 gap-2 h-full">
+            <h1 class="uppercase font-bold">Downtime</h1>
+            <ul class="self-center divide-y-2">
+                @foreach($downSites as $downSite)
+                    <li
+                        class="py-1 font-semibold truncate"
+                        style="border-color: rgba(0, 0, 0, 0.1);"
+                    >
+                        {{ $downSite }}
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 </x-dashboard-tile>
