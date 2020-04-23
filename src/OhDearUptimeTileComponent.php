@@ -24,7 +24,9 @@ class OhDearUptimeTileComponent extends Component
             ? (static::$showTile)($downSites)
             : true;
 
-        return view('dashboard-oh-dear-uptime-tile::tile', compact('downSites', 'showTile'));
+        $refreshIntervalInSeconds = config('dashboard.tiles.oh_dear_uptime.refresh_interval_in_seconds') ?? 5;
+
+        return view('dashboard-oh-dear-uptime-tile::tile', compact('downSites', 'showTile', 'refreshIntervalInSeconds'));
     }
 
     public static function showTile(callable $callable): void
