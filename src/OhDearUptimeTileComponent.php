@@ -34,4 +34,3 @@ class OhDearUptimeTileComponent extends Component
         static::$showTile = $callable;
     }
 }
-
