@@ -2,7 +2,6 @@
 
 namespace Spatie\OhDearUptimeTile;
 
-use App\Tiles\Uptime\OhDearUptimeStore;
 use Illuminate\Events\Dispatcher;
 use OhDear\LaravelWebhooks\OhDearWebhookCall;
 
