@@ -4,7 +4,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-oh-dear-uptime-tile/run-tests?label=tests)](https://github.com/spatie/laravel-dashboard-oh-dear-uptime-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-oh-dear-uptime-tile)
 
-This tile can used on the [Laravel Dashboard](https://github.com/spatie/laravel-dashboard) to display the sites that [Oh Dear](https://ohdear.app) detects as down.
+This tile can used on the [Laravel Dashboard](https://docs.spatie.be/laravel-dashboard) to display the sites that [Oh Dear](https://ohdear.app) detects as down.
 
 ## Support us
 
@@ -14,7 +14,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Documentation
 
-All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard/v1/adding-tiles/oh-dear-uptime).
+All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard).
 
 ## Testing
 
