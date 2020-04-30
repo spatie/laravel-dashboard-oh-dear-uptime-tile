@@ -32,12 +32,12 @@ class OhDearWebhooksEventSubscriber
     {
         $events->listen(
             'ohdear-webhooks::uptimeCheckFailed',
-            static::class . ':@onUptimeCheckFailed',
+            static::class . '@onUptimeCheckFailed',
         );
 
         $events->listen(
             'ohdear-webhooks::uptimeCheckRecovered',
-            static::class . ':@onUptimeCheckRecovered',
+            static::class . '@onUptimeCheckRecovered',
         );
     }
 }
