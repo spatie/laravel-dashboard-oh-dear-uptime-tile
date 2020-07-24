@@ -18,7 +18,7 @@ class OhDearWebhooksEventSubscriber
     {
         $site = $ohDearWebhookCall->site();
 
-        $this->ohDearUptimeStore->markSiteAsUp($site['url']);
+        $this->ohDearUptimeStore->markSiteAsDown($site['url']);
     }
 
     public function onUptimeCheckRecovered(OhDearWebhookCall $ohDearWebhookCall)
