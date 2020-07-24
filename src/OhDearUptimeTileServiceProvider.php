@@ -13,6 +13,8 @@ class OhDearUptimeTileServiceProvider extends EventServiceProvider
 
     public function boot()
     {
+        parent::boot();
+
         Livewire::component('oh-dear-uptime-tile', OhDearUptimeTileComponent::class);
 
         if ($this->app->runningInConsole()) {
