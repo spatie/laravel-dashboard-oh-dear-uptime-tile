@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-dashboard-oh-dear-uptime-tile` will be documented in this file
 
+## 2.0.0 - 2020-09-09
+
+- add support for dashboard v2
+
 ## 1.0.3 - 2020-07-24
 
 - fix store
