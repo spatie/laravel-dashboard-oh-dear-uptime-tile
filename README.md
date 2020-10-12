@@ -8,7 +8,7 @@ This tile can used on the [Laravel Dashboard](https://docs.spatie.be/laravel-das
 
 ## Support us
 
-[![Image](https://github-ads.s3.eu-central-1.amazonaws.com/laravel-dashboard-oh-dear-uptime-tile.jpg)](https://spatie.be/github-ad-click/laravel-dashboard-oh-dear-uptime-tile)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-dashboard-oh-dear-uptime-tile.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-dashboard-oh-dear-uptime-tile)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
