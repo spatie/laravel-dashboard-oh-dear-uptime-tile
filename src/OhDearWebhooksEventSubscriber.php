@@ -7,25 +7,22 @@ use OhDear\LaravelWebhooks\OhDearWebhookCall;
 
 class OhDearWebhooksEventSubscriber
 {
-    private OhDearUptimeStore $ohDearUptimeStore;
-
-    public function __construct(OhDearUptimeStore $ohDearUptimeStore)
-    {
-        $this->ohDearUptimeStore = $ohDearUptimeStore;
-    }
-
-    public function onUptimeCheckFailed(OhDearWebhookCall $ohDearWebhookCall)
-    {
+    public function onUptimeCheckFailed(
+        OhDearWebhookCall $ohDearWebhookCall,
+        OhDearUptimeStore $ohDearUptimeStore
+    ) {
         $site = $ohDearWebhookCall->site();
 
-        $this->ohDearUptimeStore->markSiteAsDown($site['url']);
+        $ohDearUptimeStore->markSiteAsDown($site['url']);
     }
 
-    public function onUptimeCheckRecovered(OhDearWebhookCall $ohDearWebhookCall)
-    {
+    public function onUptimeCheckRecovered(
+        OhDearWebhookCall $ohDearWebhookCall,
+        OhDearUptimeStore $ohDearUptimeStore
+    ) {
         $site = $ohDearWebhookCall->site();
 
-        $this->ohDearUptimeStore->markSiteAsUp($site['url']);
+        $ohDearUptimeStore->markSiteAsUp($site['url']);
     }
 
     public function subscribe(Dispatcher $events)
