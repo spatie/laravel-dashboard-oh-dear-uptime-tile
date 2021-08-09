@@ -6,16 +6,9 @@ use Spatie\Dashboard\Models\Tile;
 
 class OhDearUptimeStore
 {
-    private Tile $tile;
-
     public static function make()
     {
         return new static();
-    }
-
-    public function __construct()
-    {
-        $this->tile = Tile::firstOrCreateForName('ohDearUptime');
     }
 
     public function markSiteAsDown(string $siteUrl): self
@@ -26,7 +19,7 @@ class OhDearUptimeStore
 
         $uniqueDownSites = array_unique($downSites);
 
-        $this->tile->putData('downSites', $uniqueDownSites);
+        $this->getTile()->putData('downSites', $uniqueDownSites);
 
         return $this;
     }
@@ -37,20 +30,29 @@ class OhDearUptimeStore
 
         $downSites = array_filter($downSites, fn ($downSite) => $downSite !== $upSiteUrl);
 
-        $this->tile->putData('downSites', $downSites);
+        $this->getTile()->putData('downSites', $downSites);
 
         return $this;
     }
 
     public function clearDownSites(): self
     {
-        $this->tile->putData('downSites', []);
+        $this->getTile()->putData('downSites', []);
 
         return $this;
     }
 
     public function downSites(): array
     {
-        return $this->tile->getData('downSites') ?? [];
+        return $this->getTile()->getData('downSites') ?? [];
+    }
+
+    protected function getTile(): Tile
+    {
+        static $tile = null;
+
+        $tile ??= Tile::firstOrCreateForName('ohDearUptime');
+
+        return $tile;
     }
 }
