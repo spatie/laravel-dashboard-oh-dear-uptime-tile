@@ -1,3 +1,6 @@
+
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+
 # A tile to display sites that are down
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-oh-dear-uptime-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-oh-dear-uptime-tile)
@@ -29,11 +32,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
+If you've found a bug regarding security please mail [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
 
 ## Credits
 
