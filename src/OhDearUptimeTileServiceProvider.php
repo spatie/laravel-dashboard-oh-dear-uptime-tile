@@ -2,18 +2,15 @@
 
 namespace Spatie\OhDearUptimeTile;
 
-use Illuminate\Foundation\Support\Providers\EventServiceProvider;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
-class OhDearUptimeTileServiceProvider extends EventServiceProvider
+class OhDearUptimeTileServiceProvider extends ServiceProvider
 {
-    protected $subscribe = [
-        OhDearWebhooksEventSubscriber::class,
-    ];
-
-    public function boot()
+    public function boot(): void
     {
-        parent::boot();
+        Event::subscribe(OhDearWebhooksEventSubscriber::class);
 
         Livewire::component('oh-dear-uptime-tile', OhDearUptimeTileComponent::class);
 

@@ -9,29 +9,29 @@ class OhDearWebhooksEventSubscriber
 {
     public function onUptimeCheckFailed(
         OhDearWebhookCall $ohDearWebhookCall
-    ) {
-        $site = $ohDearWebhookCall->site();
+    ): void {
+        $monitor = $ohDearWebhookCall->monitor();
 
-        (new OhDearUptimeStore)->markSiteAsDown($site['url']);
+        (new OhDearUptimeStore)->markSiteAsDown($monitor['url']);
     }
 
     public function onUptimeCheckRecovered(
         OhDearWebhookCall $ohDearWebhookCall
-    ) {
-        $site = $ohDearWebhookCall->site();
+    ): void {
+        $monitor = $ohDearWebhookCall->monitor();
 
-        (new OhDearUptimeStore)->markSiteAsUp($site['url']);
+        (new OhDearUptimeStore)->markSiteAsUp($monitor['url']);
     }
 
-    public function subscribe(Dispatcher $events)
+    public function subscribe(Dispatcher $events): void
     {
         $events->listen(
-            'ohdear-webhooks::uptimeCheckFailedNotification',
+            'ohdear-webhooks::uptimeCheckFailed',
             static::class . '@onUptimeCheckFailed',
         );
 
         $events->listen(
-            'ohdear-webhooks::uptimeCheckRecoveredNotification',
+            'ohdear-webhooks::uptimeCheckRecovered',
             static::class . '@onUptimeCheckRecovered',
         );
     }
