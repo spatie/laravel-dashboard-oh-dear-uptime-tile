@@ -2,21 +2,14 @@
 
 namespace Spatie\OhDearUptimeTile;
 
-use Livewire\Component;
+use Illuminate\Contracts\View\View;
+use Spatie\Dashboard\Components\BaseTileComponent;
 
-class OhDearUptimeTileComponent extends Component
+class OhDearUptimeTileComponent extends BaseTileComponent
 {
     protected static $showTile = null;
 
-    /** @var string */
-    public $position;
-
-    public function mount(string $position)
-    {
-        $this->position = $position;
-    }
-
-    public function render()
+    public function render(): View
     {
         $downSites = OhDearUptimeStore::make()->downSites();
 

@@ -6,9 +6,9 @@ use Spatie\Dashboard\Models\Tile;
 
 class OhDearUptimeStore
 {
-    public static function make()
+    public static function make(): static
     {
-        return new static();
+        return new static;
     }
 
     public function markSiteAsDown(string $siteUrl): self

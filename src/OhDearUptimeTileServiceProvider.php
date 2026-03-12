@@ -2,18 +2,15 @@
 
 namespace Spatie\OhDearUptimeTile;
 
-use Illuminate\Foundation\Support\Providers\EventServiceProvider;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
-class OhDearUptimeTileServiceProvider extends EventServiceProvider
+class OhDearUptimeTileServiceProvider extends ServiceProvider
 {
-    protected $subscribe = [
-        OhDearWebhooksEventSubscriber::class,
-    ];
-
-    public function boot()
+    public function boot(): void
     {
-        parent::boot();
+        Event::subscribe(OhDearWebhooksEventSubscriber::class);
 
         Livewire::component('oh-dear-uptime-tile', OhDearUptimeTileComponent::class);
 
@@ -24,9 +21,9 @@ class OhDearUptimeTileServiceProvider extends EventServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/dashboard-oh-dear-uptime-tile'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/dashboard-oh-dear-uptime-tile'),
         ], 'dashboard-oh-dear-uptime-tile-views');
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-oh-dear-uptime-tile');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dashboard-oh-dear-uptime-tile');
     }
 }
