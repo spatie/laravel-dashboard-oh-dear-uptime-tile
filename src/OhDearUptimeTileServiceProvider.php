@@ -21,9 +21,9 @@ class OhDearUptimeTileServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/dashboard-oh-dear-uptime-tile'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/dashboard-oh-dear-uptime-tile'),
         ], 'dashboard-oh-dear-uptime-tile-views');
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-oh-dear-uptime-tile');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dashboard-oh-dear-uptime-tile');
     }
 }
