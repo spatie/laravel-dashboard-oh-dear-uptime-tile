@@ -10,7 +10,7 @@ class ClearOhDearDownSitesCommand extends Command
 
     protected $description = 'Clear all sites that are down';
 
-    public function handle()
+    public function handle(): void
     {
         $this->info('Clearing down sites...');
 
